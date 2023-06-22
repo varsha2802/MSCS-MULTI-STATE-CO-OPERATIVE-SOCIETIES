@@ -1,5 +1,5 @@
 ﻿# MSCS-MULTI-STATE-CO-OPERATIVE-SOCIETIES
-# Dashboard for the CRCS portal of the Ministry of Cooperation. The Central Registrar for Cooperative Societies (CRCS) is responsible for registering and regulating multistate cooperative societies in India, in accordance with the MSCS Act of 2002. As part of this hackathon, the task was to design and develop a comprehensive dashboard for the upcoming new CRCS portal that will streamline the registration process, handle amendments and appeals, and manage annual returns for the registered societies.
+ Dashboard for the CRCS portal of the Ministry of Cooperation. The Central Registrar for Cooperative Societies (CRCS) is responsible for registering and regulating multistate cooperative societies in India, in accordance with the MSCS Act of 2002. As part of this hackathon, the task was to design and develop a comprehensive dashboard for the upcoming new CRCS portal that will streamline the registration process, handle amendments and appeals, and manage annual returns for the registered societies.
 
 This project is made using Django Framework.
 Procedure to follow to run this project:
