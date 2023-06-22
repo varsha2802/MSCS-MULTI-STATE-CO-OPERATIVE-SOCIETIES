@@ -1,0 +1,557 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\index.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #registrars {
+        color: green;
+    }
+
+    .pagehead {
+        background-color: #d7c6c6;
+        width: 90vw;
+        margin: auto;
+    }
+
+
+    .pagecontain {
+        background-color: aliceblue;
+        width: 60vw;
+        margin: auto;
+    }
+</style>
+{% endblock style %}
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+
+
+{% block body %}
+{{block.super}}
+
+<div class="PageHead">
+    <h3 style="text-align: center;">List Of Registrars of States/UTs</h3>
+</div>
+
+<div class="PageContain">
+
+    <table cellspacing="10" cellpadding="5"
+        style="width:98%; text-align:center; font-family:Tahoma;  color:black; padding-bottom:2px; ">
+        <tr>
+            <td><strong>ANDHRA PRADESH<br />
+                </strong>Commissioner &amp; Registrar of Cooperative Societies,
+                <br />
+                5th Floor,Gruhakalpa,Mojam Jahi&nbsp; Road,&nbsp;
+                <br />
+                Hyderabad - 500001,Andhra Pradesh
+                <br />
+                Tel: 040- 24613043,
+                <br />
+                FAX :040-24613041<br />
+                Email : <a href="mailto:ccandress@ap.gov.in">ccandress@ap.gov.in</a>
+            </td>
+            <td><strong>ARUNACHAL PRADESH</strong><br />
+                Registrar of Cooperative Societies
+                <br />
+                Government of Arunachal Pradesh
+                <br />
+                Sahkarita Bhawan
+                Court Street
+                D-Sector
+                <br />
+                Naharlagun-791110 Arunachal Pradesh<br />
+                Tel: 0360-2244319<br />
+                Email : <a href="mailto:cooparun@gmail.com">cooparun@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>ASSAM<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Assam,&nbsp;<br /> Khanapara, Guwahati-781022<br />
+                Tel No : 0361-2359936<br />
+                EMail ID: <a href="mailto:rcs@rcsassam.org">rcs@rcsassam.org</a>,
+                <a href="mailto:itcell@rcsassam.org">itcell@rcsassam.org</a>
+            </td>
+            <td><strong>BIHAR</strong><br />
+                Registrar, Cooperative Societies
+                <br />
+                Govt. of Bihar, 2nd Floor, Vikas Bhawan,
+                <br />
+                New Secretariat, Patna - 800 015
+                <br />
+                Tel: (0612)-2215884<br />
+                Fax: (0612)-2200693
+
+
+                <br />
+                E-Mail: <a href="mailto:rcsbihar1@gmail.com">rcsbihar1@gmail.com</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>CHHATTISGARH<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Chhattisgarh,&nbsp; Block – B, 2nd &amp; 3rd Floor,
+                <br />
+                Indrawati Bhawan, Naya Raipur, Chhattisgarh - 492001<br />
+                Tel : 0771 2511921<br />
+                FAX: 0771 4002029<br />
+                Email-ID : <a href="mailto:rcs.coop@nic.in">rcs.coop@nic.in</a>
+            </td>
+            <td><strong>GOA<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Goa,&nbsp;
+                ‘Sahakar Sankul’, 4 & 5 TH FLOOR,
+                <br />
+                EDC Complex,
+                Patto Panaji Goa<br />
+                &nbsp;Tel : 0832 2437134/ 2437165/ 2437175
+                <br />
+                Fax No. 0832 2437134
+                <br />
+                Email : <a href="mailto:reg-orcs.goa@nic.in">reg-orcs.goa@nic.in</a> <br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>GUJARAT<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Gujarat,&nbsp; Block No-10, First Floor,
+                <br />
+                Dr. Jivraj Mehta Bhavan Gandhinagar,
+                <br />
+                Gujarat - 382010<br />
+                Tel : 079-23253868,
+                <br />
+                FAX: 079-23253862,<br />
+                Email-ID : <a href="mailto:rcs@gujarat.gov.in">rcs@gujarat.gov.in</a>
+            </td>
+            <td><strong>HIMACHAL PRADESH<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Himachal Pradesh,&nbsp; 25 SDA Complex,
+                <br />
+                Sahkaar Bhavan, Kasumpti, Shimla 171 009<br />
+                Tel : 0177-2620970 ,
+                <br />
+                FAX: 0177-26220970<br />
+                Email-ID : <a href="mailto:rcs-hp@nic.in">rcs-hp@nic.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>HARYANA<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Haryana,&nbsp; Bays NO 27 -30, Sector 2,,
+                <br />
+                Sahakarita Bhawan, Panchkula 134109 <br />
+                Phone No. : 0172-2585023, 2583438<br />
+
+                Fax No. : 0172-2585261<br />
+
+                Email :<a href="mailto:cooperatives@hry.nic.in">cooperatives@hry.nic.in</a>,
+                <a href="mailto:rcsharyanaa@yahoo.com">rcsharyanaa@yahoo.com</a>
+            </td>
+            <td><strong>JAMMU &amp; KASHMIR<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Jammu &amp; Kashmir,&nbsp; Rajinder Nagar, JDA Phase-I,
+                <br />
+                Ban Talab , Jammu SDA, Bemina
+                Lal Mandi,
+                <br />
+                Jawahar Nagar, Srinagar<br />
+                Tel : 0191 - 2597859 Jammu,
+                <br />
+                Tel : 0194-2490327<br />
+                Email-ID : <a href="mailto:rcsharyanaa@yahoo.com">rcsharyanaa@yahoo.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>JHARKHAND</strong><br />
+                Registrar, Cooperative Societies
+                <br />
+                Govt. of Jharkhand, Engineer&#39;s Hostel No- 02,
+                <br />Near Dhurwa Golchakkar<br />
+                Dhurwa, Ranchi 834 004<br />
+                Ph: 0651-2400490, 0651 2400491<br />
+                Fax : 0651 2284951
+                <br />
+                Email: <a href="mailto:Jharkhand.coopregistrar@gmail.com">Jharkhand.coopregistrar@gmail.com</a>
+            </td>
+            <td><strong>KERALA</strong><br />
+                Registrar of Co-operative Societies,
+                <br />
+                NSS Building, Behind Govt. Secretariat,<br />
+                &nbsp;Thiruvananthapuram-695 001 <br />
+                Telephone : 0471 - 2331982 Fax : 0471 - 2331513
+                <br />
+                &nbsp;E-mail : <a href="mailto:keralarcs@coop.kerala.gov.in ">keralarcs@coop.kerala.gov.in </a>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>KARNATAKA<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Karnataka, No 1, Ali Asker Road, Bengaluru,
+                <br />
+                Karnataka 560052<br />
+                Tel : 080 22252036
+                ,
+                <br />
+                FAX: 080 22264786<br />
+                Email-ID : <a href="mailto:regcodept@gmail.com">regcodept@gmail.com</a>
+            </td>
+            <td><strong>MADHYA PRADESH</strong><br />Registrar Co-Operative Societies
+                <br />
+                Government Departments
+                <br />
+                Ground Floor, Vindhyachal Bhawan,
+                <br />
+                Arera Hills, Bhopal- 462004 Near MP Secretariat
+                <br />
+                Tel : (0755) 2551513
+                <br />
+                Email-ID : <a href="mailto:rcs_mp@yahoo.co.in">rcs_mp@yahoo.co.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>MAHARASHTRA</strong><br />
+                Commissioner for Cooperation
+                <br />
+                Registrar of Cooperative Societies
+                <br />
+                2nd Floor, New Central Building,
+                <br />
+                Ambedkar Wellesly Rd, Pune,
+                <br />
+                Maharashtra 411001
+                <br />
+                Tel.: 020 2612 2846
+                <br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+            <td><strong>MANIPUR<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Manipur, Imphal 759 004<br />
+                Tel.: 0385 2310770 , Fax&nbsp; : 0385 2322139<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>MEGHALAYA<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Meghalaya, New Administrative Building,
+                <br />
+                Lower Lachumiere Shillong-793001, East Khasi Hills District, Meghalaya<br />
+                Tel.: 0364 2210132<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+            <td><strong>MIZORAM<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Mizoram, Babutlang, Aizwal,
+                <br />
+                Mizoram – 796001 <br />
+                Tel.: 0364 2210132<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>NAGALAND<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Nagaland, Kohima 797 001<br />
+                Tel.: 0370 2241608, 0370 2240039<br />
+                FAX: 0370 -2240039<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+            <td><strong>ODISHA<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Odisha, Head of Deptt. building,<br />
+                Bhubneshwar 751 001<br />
+                Tel.: 0674 2401224<br />
+                FAX:&nbsp; 0674 2412997<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.gov.in">commcoop@rediffmail.gov.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 27px"><strong>PUNJAB<br />
+                </strong>Registrar, Cooperative Societies , Govt. of Punjab
+                <br />
+                17 Bays Building, Sector 17,
+                <br />
+                Chandigarh– 160017 <br />
+                Phone No: 0172-5046808
+                <br />
+                E-mail: <a href="mailto:rcspunjab@gmail.com">rcspunjab@gmail.com</a>
+            </td>
+            <td style="height: 27px"><strong>RAJASTHAN<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Rajasthan, Nehru Sahakar Bhawan,
+                <br />
+                22, Godown, Bhawani Singh Road,
+                <br />
+                Jaipur Rajasthan – 302001<br />
+                Tel : 0141-2740737, FAX: 0141-2740045<br />
+                Email-ID : <a href="mailto:reg.coop@rajasthan.gov.in">reg.coop@rajasthan.gov.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>SIKKIM<br />
+                </strong>Registrar, Cooperative Societies Govt. of Sikkim&nbsp;
+                <br />
+                1Sahakari Bhawan, Tadong, Gangtok 737 102<br />
+                Phone No: 03592-231878<br />
+                FAX: 03592 232006<br />
+                E-mail: <a href="mailto:reg.coop@sikkim.gov.in">reg.coop@sikkim.gov.in</a>
+            </td>
+            <td><strong>TAMIL NADU</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Tamil Nadu,
+                <br />
+                170 Periyar EVR High Road, Kilpauk,
+                <br />
+                Chennai-600 010
+                <br />
+                Tel : 28252425 , FAX&nbsp;&nbsp; : 28251877<br />
+                Email : <a href="mailto:rcs@tn.nic.in">rcs@tn.nic.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>TRIPURA<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Govt. of Tripura, Palace Compound, North Gate,
+                <br />
+                Agartala, Tripura – 799001<br />
+                Tel.: 0381 2323765<br />
+                Fax : 0381 26133082<br />
+                Email Id : <a href="mailto:commcoop@rediffmail.com">commcoop@rediffmail.com</a>
+            </td>
+            <td><strong>TELANGANA<br />
+                </strong>Registrar of Cooperative Societies
+                <br />
+                Gruha Kalpa Building, M J Road,
+                <br />
+                Nampally, Hyderabad - 500001<br />
+
+                Fax:
+                040-24613041<br />
+                Email: <a href="mailto:tsccandres@gmail.com">tsccandres@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>UTTAR PRADESH</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Govt. of Uttar Pradesh,&nbsp; 14 Vidhan Sabha Marg<br />
+                Lucknow, Uttar Pradesh 226001
+                <br />
+                Tel : 0522-26222267,
+                <br />
+                Email : <a href="mailto:comm.coop.up@gmail.com">comm.coop.up@gmail.com</a>
+            </td>
+            <td><strong>UTTARAKHAND<br />
+                </strong>Addl. Secretary Cooperation &amp;
+                <br />
+                Registrar of Cooperative Societies,
+                <br />
+                Govt. of Uttarakhand,&nbsp;
+                <br />
+                108, Old Nehru Colony, Dehradun -248001<br />
+                Tel : 0135 2669722<br />
+                FAX: 0135 2712268<br />
+                Email: <a href="mailto:drfscddn@gmail.com">drfscddn@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>WEST BENGAL<br />
+                </strong>Registrar of Cooperative Societies ,
+                <br />
+                Govt. of West Bengal,&nbsp;New Secretariat Building
+                <br />
+                4th Floor, 1 K.S Roy Road, Kolkata&nbsp; 700 001<br />
+                Tel: 033 2248-6271<br />
+                Fax :&nbsp; 033 22147114<br />
+                Email : <a href="mailto:coopwbdte@gmail.com">coopwbdte@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Union Territories</strong><br />
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>PONDICHERY</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                V.V.P. Nagar, Thattanchavady,
+                <br />
+                Puducherry - 605009 <br />
+                Tel : 2272007 ,FAX: 2272619<br />
+                Email-ID : <a href="mailto:coopwbdte@gmail.com">coopwbdte@gmail.com</a>
+            </td>
+            <td><strong>LAKSHADWWEEP</strong><br />
+                Registrar of Cooperative Societies in charge,
+                <br />
+                Union Territory of Lakshadweep Admin<br />
+                Kavaratti 682 555<br />
+                Tel : 04896-262935, 04896 262318<br />
+                &nbsp;,FAX: 04896 263210<br />
+                Email-ID : <a href="mailto:ik-coops@hub.nic.in">ik-coops@hub.nic.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Union Territories</strong><br />
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>ANDAMAN &amp; NICOBAR</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Andaman &amp; Nicobar Islands<br />
+                P.O. Junglighat, VIP Road,<br />
+                Port Blair 744 103<br />
+                Tel : <br />
+                &nbsp;Email-ID : <a href="mailto:ik-coops@hub.nic.in">ik-coops@hub.nic.in</a>
+            </td>
+            <td><strong>NEW DELHI</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Parliament Street, New Delhi
+                110 001<br />
+                Tel : 011 23742806<br />
+                &nbsp;Email-ID : <a href="mailto:ik-coops@hub.nic.in">ik-coops@hub.nic.in</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Union Territories</strong><br />
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>DAMAN &amp; DIU</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Moti&nbsp; Daman ,<br />
+                Daman &amp; Diu<br />
+                Tel : 254698<br />
+                &nbsp;Email-ID : <a href="mailto:ik-coops@hub.nic.in">ik-coops@hub.nic.in</a>
+            </td>
+            <td><strong>CHANDIGARH</strong><br />
+                Registrar of Cooperative Societies ,
+                <br />
+                Old Estate Building
+                <br />
+                Sector 17, Chandigarh<br />
+                Tel : 2709000<br />
+                &nbsp;Email-ID : <a href="mailto:ik-coops@hub.nic.in">ik-coops@hub.nic.in</a>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+</div>
+
+</div>
+
+
+
+
+{% endblock body%}

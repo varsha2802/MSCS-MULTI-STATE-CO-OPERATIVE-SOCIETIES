@@ -1,0 +1,79 @@
+{% extends 'base-chart.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\form-i.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #chart1 {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+
+    .child {
+        background-color: #ddddf7;
+    }
+
+    img,
+    svg {
+        vertical-align: middle;
+        width: 666px;
+    }
+
+    #charts {
+        background-color: aliceblue;
+    }
+</style>
+{% endblock style %}
+
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+{% block form-heading %}
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">State-Wise Chart</p>
+    </div>
+    <div class="child-content">
+        <!-- <form method="POST" action="." enctype="multipart/form-data"> -->
+        <!-- Form fields -->
+        <div id="charts">
+            <img src="static/Figure_1.png" alt=" Graph Image" style="mix-blend-mode: multiply;">
+            <!-- <p>Graph Data: {{ graph_data.graph_data }}</p> -->
+            <br>
+            <br>
+            <a id="ctl00_ContentPlaceHolder1_HyperLink1" href="static/Figure_1.png"
+                style="color:blue;font-weight:bold;">
+                DOWNLOAD</a>
+
+        </div>
+        <!-- </form> -->
+
+
+
+
+        <br />
+        <br />
+    </div>
+
+
+
+    {% endblock form-heading %}

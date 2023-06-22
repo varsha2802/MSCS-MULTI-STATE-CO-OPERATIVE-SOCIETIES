@@ -1,0 +1,105 @@
+{% extends 'userfiles/base-form.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\form-i.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #form-v {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+{{block.super}}
+{% endblock body%}
+
+{% block name %}
+{{block.super}}
+
+{%endblock name %}
+
+{% block form-heading %}
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">FORM – V</p>
+        <p class="head2">[See sub-paragraph (3) of paragraph 7 of the Schedule]</p>
+        <p class="head3">Nomination form for election of office bearers</p>
+    </div>
+    <div class="child-content">
+        <ol>
+            <li>Name of the Multi-State Cooperative Society and Address.</li>
+            <li>Office for which contesting.</li>
+            <li>Name of the candidate in case of an Individual member or name of the delegate and the member cooperative
+                Society or multi-state cooperative society which he is representing .</li>
+            <li>Serial no. in the register of members</li>
+            <li>Father’s or husband’s name (in case of individual member)</li>
+            <li>Address</li>
+            <li>Name of the proposer in case the proposer is an individual member and the name of the society and The
+                delegate in the case proposer Is a delegate of a society</li>
+            <li>Serial no. of the proposer in the Register of members</li>
+            <li>Signature of the proposer</li>
+            <li>Name of the seconder when the seconder is an individual member and name of the society and the delegate
+                in
+                case the seconder is a delegate of a society</li>
+            <li>Serial no. of the seconder in the register of members</li>
+            <li>Signature of the seconder</li>
+        </ol>
+        <div style="text-align: left">
+            <div style="text-align: center"> <strong style="text-align: center">
+                    <br />
+                    CANDIDATES DECLARATION
+                    <br />
+                </strong></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div style="text-align:justify;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I declare that I am willing to stand for
+                election
+                of office of the President/Chairperson/Vice-President/ Vice-Chairperson (specify for any other office)
+                and
+                that,
+                to the best of my knowledge and belief I have not incurred any disqualification for membership of the
+                board
+                of
+                ___________________ multi-state cooperative society in terms of the Act, the rules and the bye-laws of
+                the
+                multi-state cooperative society..
+            </div> <br />
+            <div style="text-align: right">(Signature of the candidate)</div>
+            <br />
+            <br />
+            <div style="text-align: center"><strong>ENDORSEMENT BY THE RETURNING OFFICER</strong></div>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This nomination paper was
+                presented to me in person by ___________/ received by registered post on _____ at _____ hrs.</div>
+            <br />
+            <div> Place _________
+                <br />
+                Date _________
+            </div>
+            <br />
+            <div style="text-align: right"> Signature of Returning Officer Or person authorized by him</div>
+            <br />
+        </div>
+        <div>
+            &nbsp;&nbsp;
+            <br />
+            <a id="ctl00_ContentPlaceHolder1_HyperLink1" href="Form/Form5.pdf"
+                style="color:Red;font-weight:bold;">DOWNLOAD
+                FORM
+                5 IN PDF</a>
+
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+
+</div>
+{% endblock form-heading %}

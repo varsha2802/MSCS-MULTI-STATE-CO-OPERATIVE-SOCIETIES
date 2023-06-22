@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static/login.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #reg {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+
+    .child-content {
+        background-color: #d7c6c6;
+    }
+
+    #register {
+        background-color: aliceblue;
+    }
+</style>
+{% endblock style %}
+
+{% block body %}
+
+
+
+
+<div class="child">
+    <div class="child-heading">
+        <h2 style="text-align: center;"> User Registration Form</h2>
+
+    </div>
+    <div class="child-content">
+
+        <form id="register" method="post" action="registration">
+            {% csrf_token %}
+
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br>
+                </div>
+
+                <div class="block">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
+                </div>
+
+                <div class="block">
+                    <label for="username">User Name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter UserName" required><br>
+                </div>
+            </div>
+
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="mobile">Mobile No. of Authorized Officer:</label>
+                    <input type="phone" id="Mobile no." name="mobile" placeholder="Authorized Officer's Mobile No"
+                        required>
+                </div>
+
+                <div class="block">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="Please Enter Email" required>
+                </div>
+
+                <div class="block">
+                    <label for="desig">Designation:</label>
+                    <select id="TYPE" name="desig" required>
+                        <option value="">--Designation--</option>
+                        <option value="Chairman / President">Chairman / President</option>
+                        <option value="Vice Chairman / Vice President">Vice Chairman / Vice President</option>
+                        <option value="Managing Director / CEO">Managing Director / CEO</option>
+                        <option value="Co-Opted Director">Co-Opted Director</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="country">Select Country:</label>
+                    <select name="country" id="countySel" size="1" required>
+                        <option value="" selected="selected">--Select Country--</option>
+                    </select>
+                </div>
+
+                <div class="block">
+                    <label for="state">Select State:</label>
+                    <select name="state" id="stateSel" size="1" required>
+                        <option value="" selected="selected">--Please select Country first--</option>
+                    </select>
+                </div>
+
+                <div class="block">
+                    <label for="district">Select District:</label>
+                    <select name="district" id="districtSel" size="1" required>
+                        <option value="" selected="selected">--Please select State first--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="md">Name of designated person: </label>
+                    <input type="text" id="chairman" name="md" placeholder="Please Enter Name" required>
+                </div>
+
+                <div class="block">
+                    <label for="address">Complete Registered Address(with PIN code): </label>
+                    <textarea id="address" name="address" rows="2" cols="50" placeholder="Enter your address here"
+                        required></textarea>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="pan">PAN NO.</label>
+                    <input type="text" id="pan" name="pan" placeholder="Please Enter PAN No." required>
+                </div>
+
+                <div class="block">
+                    <label for="tan">TAN NO.</label>
+                    <input type="text" id="tan" name="tan" placeholder="Please Enter TAN No." required>
+                </div>
+
+                <div class="block">
+                    <label for="service">Service Tax No.</label>
+                    <input type="text" id="Tax" name="service" placeholder="Please Enter Tax No." required>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="password"> Create Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Please Enter Password" required>
+                </div>
+
+                <div class="block">
+                    <label for="confirm">Confirm Password:</label>
+                    <input type="password" id="confirm" name="confirm" placeholder="Please Re-Enter Password" required>
+                </div>
+            </div>
+
+
+            <!-- <input type="submit" value="Submit"> -->
+            <button class="btni">SUBMIT</button>
+            <a href="/adminlogin">Login Here</a>
+        </form>
+        <script>
+            var stateObject = {
+                "India": {
+                    "ANDAMAN AND NICOBAR": ["ALL DISTRICTS", "NICOBAR", "NORTH AND MIDDLE ANDMAN", "SOUTH ANDAMAN"],
+                    "ANDHRA PRADESH": ["ANANTAPUR", "CHITTOOR", "CUDDAPAH", "EAST GODAVARI", "GUNTUR", "HYDERABAD", "KRISHNA", "KURNOOL", "NELLORE", "PRAKASAM", "SRIKAKULAM", "VISAKHAPATANAM", "WEST GODAVARI"],
+                    "ARUNACHAL PRADESH": ["ANHAW", "CHANGLANG", "DIBANG VALLEY", "EAST KAMENG", "EAST SIANG", "KURUNG KUMEY", "LOHIT", "LOWER DIBANG VALLEY", "LOWER SUBANSIRI", "PAPUM PARE", "TAWANG", "TIRAP", "UPPER SIANG", "UPPER SUBANSIRI", "WEST KAMENG", "WEST SIANG"],
+                    "ASSAM": ["BARPETA", "BASKA", "BONGIGAON", "CACHAR", "CHIRANG", "DARRANG", "DHEMAJI", "DHUBRI", "DIBRUGARH", "GOALPARA", "GOLAGHAT", "HAILAKANDI", "JORHAT", "KAMRUP", "KAMRUP-METRO", "KARBI ANGLONG", "KARMIGANJ", "KOKRJHAR", "LAKHIMPUR", "MARIGAON", "NAGAON", "NALBARI", "NORTH CACHAR HILLS", "SIVASAGAR", "SONITPUR", "TINSUKIA", "UDAL GURI"],
+                    "BIHAR": ["ARARIA", "ARWAL", "AURANGABAD", "BANKA", "BEGUSARAI", "BHAGALPUR", "BHOJPUR", "DARBHANGA", "GAYA", "GOPIGANJ", "JAMUI", "JEHANABAD", "KAIMPUR", "KATIHAR", "KHAGARIA", "KISANGANJ", "LAKHISARAI", "MADHEPURA", "MADHUBANI", "MUNGER", "NALANDA", "NAWADA", "PASHCHIM CHAMPARAN", "PATNA", "PURBI CHAMPARAN", "PURNIA", "ROHTAS", "SAHARSA", "SAMASTIPUR", "SARAN", "SHEIKHPURA", "SHEOHAR", 'SITAMARHI', "SIWAN", "SUPAUL", "VAISJHALI"],
+                    "CHANDIGARH": ["CHANDIGARH"],
+                    "CHHATTISGARH": ["BASTAR", "BIJAPUR", 'BILASPUR', "DANTEWADA", "DHAMTARI", "DURG", "JANJGIR-CHAMPA", "JASHPUR", "KANKER", "KAWARDHA", "KORBA", "KORIYA", "MAHASAMUND", "NARAYANPUR", "RAIGARH", "RAIPUR", "RAJNANDGAON", "SURGUJA "],
+                    "DADRA AND NAGAR HAVELI": [],
+                    "DAMAN AND DIU": [],
+                    "DELHI": ["NEW DELHI", "CENTRAL DELHI", "NORTH DELHI", "SOUTH DELHI", "WEST DELHI", "EAST DELHI", "NORTH WEST DELHI", "NORTH EAST DELHI", "SOUTH WEST DELHI", "SOUTH EAST DELHI"],
+                    "GOA": [],
+                    "GUJARAT": [],
+                    "HARYANA": [],
+                    "HIMACHAL PRADESH": [],
+                    "JAMMU AND KASHMIR": [],
+                    "JHARKHAND": [],
+                    "KARNATAKA": [],
+                    "KERALA": [],
+                    "LAKSHADWEEP": [],
+                    "MADHYA PRADESH": [],
+                    "MAHARASHTRA": [],
+                    "MANIPUR": [],
+                    "MEGHALAYA": [],
+                    "MIZORAM": [],
+                    "NAGALAND": [],
+                    "ODISHA": [],
+                    "PONDICHERRY": [],
+                    "PUNJAB": [],
+                    "RAJASTHAN": [],
+                    "SIKKIM": [],
+                    "TAMIL NADU": [],
+                    "TELANGANA": [],
+                    "TRIPURA": [],
+                    "UTTAR PRADESH": [],
+                    "UTTARAKHAND": [],
+                    "WEST BENGAL": [],
+                },
+            }
+            window.onload = function () {
+                var countySel = document.getElementById("countySel"),
+                    stateSel = document.getElementById("stateSel"),
+                    districtSel = document.getElementById("districtSel");
+                for (var country in stateObject) {
+                    countySel.options[countySel.options.length] = new Option(country, country);
+                }
+                countySel.onchange = function () {
+                    stateSel.length = 1; // remove all options bar first
+                    districtSel.length = 1; // remove all options bar first
+                    if (this.selectedIndex < 1) return; // done 
+                    for (var state in stateObject[this.value]) {
+                        stateSel.options[stateSel.options.length] = new Option(state, state);
+                    }
+                }
+                countySel.onchange(); // reset in case page is reloaded 
+                stateSel.onchange = function () {
+                    districtSel.length = 1; // remove all options bar first
+                    if (this.selectedIndex < 1) return; // done 
+                    var district = stateObject[countySel.value][this.value];
+                    for (var i = 0; i < district.length; i++) {
+                        districtSel.options[districtSel.options.length] = new Option(district[i],
+                            district[i]);
+                    }
+                }
+            }
+        </script>
+
+    </div>
+</div>
+{% endblock body %}

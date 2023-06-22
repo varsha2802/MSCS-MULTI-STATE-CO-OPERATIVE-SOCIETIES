@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\login.css" />
+
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #adminlogin {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+
+    #login {
+        background-color: aliceblue;
+    }
+
+    .child-content {
+        background-color: #d7c6c6;
+        width: fit-content;
+    }
+
+    .child-content input[type="text"],
+    .child-content input[type="password"],
+    .child-content input[type="email"],
+    .child-content input[type="number"],
+    .child-content input[type="phone"] {
+        width: 71%;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 15px;
+        border: 1px solid #4e4141;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+
+    }
+
+    .captcha {
+        width: 35%;
+        margin: auto;
+        border: solid #121111 3px;
+        /* float: left; */
+        margin-bottom: 10px;
+        padding: 10px 47px;
+        border-radius: 50%;
+        background-color: #fdfdfd;
+
+    }
+
+
+    .captcha:hover {
+        color: white;
+        background-color: black;
+    }
+</style>
+{% endblock style %}
+
+{% block body %}
+
+
+
+
+
+
+<div class="child">
+    <div class="child-heading">
+        <h2 style="text-align: center">User Sign-In</h2>
+    </div>
+    <div class="child-content">
+        <form id="login" action="adminlogin" method="post">
+            {% csrf_token %}
+            <label for="username">User Name :</label>
+            <input type="text" name="username" id="username" placeholder="Enter Username" required />
+            <br />
+
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required />
+
+            <!-- <label for="captcha">Please enter the characters shown in the image:</label>
+            <div class="captcha" id="captcha"></div>
+            <input type="text" name="captcha" id="captcha-input" placeholder="Enter CAPTCHA value" />
+
+            <button onclick="validateForm()" class="btni">Sign in</button> -->
+            <button class="btni">Sign in</button>
+
+            <script>
+                // Generate the initial CAPTCHA on page load
+                generateCaptcha();
+
+                function generateCaptcha() {
+                    var captcha = "";
+                    var characters =
+                        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                    // Generate a random 6-character CAPTCHA
+                    for (var i = 0; i < 6; i++) {
+                        captcha += characters.charAt(
+                            Math.floor(Math.random() * characters.length)
+                        );
+                    }
+
+                    // Display the CAPTCHA in the HTML element with the ID "captcha"
+                    document.getElementById("captcha").innerHTML = captcha;
+                }
+
+                function validateForm() {
+                    var captchaInput = document.getElementById("captcha-input").value;
+                    var captchaDisplay = document.getElementById("captcha").innerHTML;
+
+                    if (captchaInput != captchaDisplay) {
+                        alert("CAPTCHA is correct! Form can be submitted.");
+                        // Add your form submission logic here
+                    } else {
+                        alert("CAPTCHA is incorrect! Please try again.");
+                        // Clear the CAPTCHA input field and generate a new CAPTCHA
+                        document.getElementById("captcha-input").value = "";
+                        generateCaptcha();
+                    }
+                }
+            </script>
+            <br />
+            <div style=" display: flex; justify-content: space-between;">
+                <a href="">Forgot Password</a>
+                <a href="/form">Register </a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock body%}

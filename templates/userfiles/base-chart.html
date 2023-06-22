@@ -1,0 +1,71 @@
+{% extends 'userfiles/base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\base-login.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #chart {
+        color: red;
+    }
+
+    .child-content {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .child-heading {
+        margin: auto;
+    }
+</style>
+
+{% endblock style %}
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+
+{% block body %}
+<div class="box">
+    <div class="sidebar">
+
+        <a id="chart1" href="/chart1logout">State-Wise Chart</a>
+        <a id="chart2" href="/chart2logout">Year-Wise Chart</a>
+        <a id="chart3" href="/chart3logout">Type-Wise Chart</a>
+        <!-- onCooperative 2002 -->
+
+    </div>
+
+    <div class="parent">
+        {% block form-heading %}
+        <div class="child">
+
+            <div class="child-heading">
+
+                <!-- <p class="head1"></p>
+                <p class="head2"></p>
+                <p class="head3"></p> -->
+
+            </div>
+            <div class="child-content">
+
+            </div>
+
+        </div>
+        {% endblock form-heading %}
+
+
+    </div>
+
+
+
+</div>
+
+</div>
+{% endblock body %}

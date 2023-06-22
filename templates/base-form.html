@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\base-login.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #forme {
+        color: red;
+    }
+</style>
+{% endblock style %}
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+{% block body %}
+{{block.super}}
+<div class="box">
+    <div class="sidebar">
+        <a id="form-i" href="/formi">Form-I</a>
+        <a id="form-ii" href="/formii">Form-II</a>
+        <a id="form-iii" href="/formiii">Form-III</a>
+        <a id="form-iv" href="/formiv">Form-IV</a>
+        <a id="form-v" href="/formv">Form-V</a>
+    </div>
+
+    <div class="parent">
+        {% block form-heading %}
+        <div class="child">
+            <!-- <div class="child-heading">
+                <p class="head1"></p>
+                <p class="head2"></p>
+                <p class="head3"></p>
+            </div>
+            <div class="child-content"></div> -->
+        </div>
+
+        {% endblock form-heading %}
+
+    </div>
+
+
+
+</div>
+
+</div>
+{% endblock body %}

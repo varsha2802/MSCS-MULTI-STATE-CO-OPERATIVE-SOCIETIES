@@ -1,0 +1,31 @@
+.boss {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.firstsection {
+  margin: 30px 30px;
+  padding: 0px 10px;
+  border: solid black 2px;
+  box-shadow: 8px 11px 5px #1eadf0c9;
+  border-radius: 2%;
+  width: 50%;
+  height: fit-content;
+}
+
+.p1 {
+
+  text-align: center;
+}
+
+.secondsection {
+  margin: 30px 30px;
+  padding: 0px 10px;
+  border: solid black 2px;
+  box-shadow: 8px 11px 5px #1eadf0c9;
+  border-radius: 2%;
+  width: 390px;
+  height: 325px;
+
+}

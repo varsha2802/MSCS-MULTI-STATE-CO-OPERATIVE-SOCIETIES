@@ -1,0 +1,53 @@
+{% extends 'userfiles/base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\base-login.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #forme {
+        color: red;
+    }
+</style>
+{% endblock style %}
+
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+
+{% block body %}
+{{block.super}}
+<div class="box">
+    <div class="sidebar">
+        <a id="form-i" href="/formilogout">Form-I</a>
+        <a id="form-ii" href="/formiilogout">Form-II</a>
+        <a id="form-iii" href="/formiiilogout">Form-III</a>
+        <a id="form-iv" href="/formivlogout">Form-IV</a>
+        <a id="form-v" href="/formvlogout">Form-V</a>
+    </div>
+
+    <div class="parent">
+        {% block form-heading %}
+        <div class="child">
+            <!-- <div class="child-heading">
+                <p class="head1"></p>
+                <p class="head2"></p>
+                <p class="head3"></p>
+            </div>
+            <div class="child-content"></div> -->
+        </div>
+
+        {% endblock form-heading %}
+
+    </div>
+
+
+
+</div>
+{% endblock body %}

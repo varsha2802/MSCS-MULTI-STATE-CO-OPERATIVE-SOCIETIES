@@ -1,0 +1,134 @@
+{% extends 'userfiles/base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static/login.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #feedbacks {
+        color: green;
+    }
+
+    .child-content {
+        background-color: #d7c6c6;
+    }
+
+    #feedback {
+        background-color: aliceblue;
+    }
+
+    .child {
+        margin-bottom: 35px;
+        height: fit-content;
+    }
+
+    .child-content {
+        box-shadow: 0px 0px 0px rgb(64 69 223 / 10%);
+        ;
+    }
+</style>
+{% endblock style %}
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+
+
+
+
+
+{% block body %}
+
+
+
+
+<div class="child">
+    <div class="child-heading">
+        <h2 style="text-align: center;"> Feedback</h2>
+
+    </div>
+    <div class="child-content">
+
+        <form id="feedback" method="post" action="feedback2" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="blockbox">
+
+                <div class="block">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required><br>
+                </div>
+
+
+                <div class="block">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="Please Enter Email" required>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="blockbox">
+
+                <div class="block">
+                    <label for="mobile">Mobile:</label>
+                    <input type="phone" id="Mobile no." name="mobile" placeholder="Mobile No." required>
+                </div>
+
+                <div class="block">
+                    <label for="typeoffeedback">Feedback Type:</label>
+                    <select id=" TYPE" name="typeoffeedback">
+                        <option value="">--Select Feedback Type--</option>
+                        <option value="Grievance">Grievance</option>
+                        <option value="Suggestion">Suggestion</option>
+                        <option value="General Information">General Information</option>
+                        <option value="Website related">Website related</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="address">Address: </label>
+                    <textarea id="address" style="align-items: center;" name="address" rows="2" cols="50"
+                        placeholder="Enter Address" required></textarea>
+                </div>
+
+                <div class="block">
+                    <label for="subject">Subject: </label>
+                    <textarea id="subject" style="align-items: center;" name="subject" rows="2" cols="50"
+                        placeholder="Enter Address" required></textarea>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block" style="text-align:center;">
+                    <label for="file">File</label>
+                    <input type="file" name="file" id="file" required>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block"><button class="btni">SUBMIT</button></div>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <!-- <input type="submit" value="Submit"> -->
+
+
+
+</div>
+</div>
+{% endblock body %}

@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\base-login.css" />
+{% endblock link %}
+
+
+{% block style %}
+{{block.super}}
+<style>
+    #portal {
+        color: red;
+    }
+
+
+
+    .sidebar {
+        background-color: #f2f2f2;
+        width: 100vw;
+        height: 60vh;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        position: relative;
+        top: 0px;
+        left: 0;
+    }
+
+    .barheading a {
+
+        font-size: larger;
+        font-weight: bold;
+
+        margin: auto;
+        border-radius: 0%;
+
+        /* display: block; */
+
+    }
+
+    .barheading a:hover {
+
+        background-color: rgb(11, 23, 131);
+    }
+
+    .barheading {
+        margin: 10px auto;
+        padding: 53px;
+        width: 20%;
+        height: 50vh;
+        text-decoration: none;
+        color: #000;
+        border: solid rgb(11, 23, 131) 2px;
+        border-radius: 9%;
+        background-color: rgb(187, 219, 250);
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .barheading span {
+        color: rgb(37, 18, 109);
+        margin: auto;
+        font-size: larger;
+        font-weight: bold;
+
+    }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+{{block.super}}
+<div class="box">
+    <div class="sidebar">
+        <div class="barheading"><span>New User Registration</span>
+            <a id="regs_1986" href="/form">Register Here</a>
+        </div>
+        <div class="barheading"><span>User Login</span>
+            <a id="regs_1986" href="/adminlogin">Login Here</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="parent">
+    {% block form-heading %}
+    <div class="child">
+
+        <!-- <div class="child-heading">
+
+                <p class="head1"></p>
+                <p class="head2"></p>
+                <p class="head3"></p>
+            </div>
+            <div class="child-content"></div> -->
+
+    </div>
+    {% endblock form-heading %}
+</div>
+
+
+
+
+
+
+
+
+{% endblock body %}

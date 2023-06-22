@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\form-i.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #relatedlink {
+        color: red;
+    }
+
+
+
+    .child {
+        /* margin-top: 0px; */
+        background-color: rgb(221, 248, 255);
+        height: fit-content;
+    }
+
+    .child-content {
+        box-shadow: 0px 0px 0px rgb(64 69 223 / 10%);
+
+    }
+
+    .child-heading {
+        margin: 10px auto;
+
+    }
+
+    .related {
+        background-color: aliceblue;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        width: 50vw;
+        box-shadow: 5px 5px 5px black;
+    }
+
+
+    .related ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+    }
+
+    dl,
+    ol,
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+    .related ul li {
+        line-height: 1.7em;
+        padding: 0 0 0 0;
+        list-style: none;
+        margin: 5px 15px;
+        padding: 5px 15px;
+        border: solid 2px black;
+        width: 180px;
+        height: 68px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .related ul li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .related ul li a:hover {
+        color: white;
+    }
+
+
+    .related ul li:hover {
+        background-color: grey;
+        color: white;
+    }
+</style>
+{% endblock style %}
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+
+
+{% block body %}
+
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">Related Links</p>
+    </div>
+    <div class="child-content">
+        <div class="related">
+            <ul>
+
+                <li><a href="http://agricoop.nic.in/">Deptt. of Agriculture & Cooperation</a> </li>
+                <li><a href="http://www.cooperation.ap.gov.in/">Andhra Pradesh</a> </li>
+                <li><a href="http://online.assam.gov.in/cooperation">Assam</a> </li>
+
+
+            </ul>
+            <ul>
+                <li><a href="http://sahakara.kar.gov.in/">Karnataka</a> </li>
+                <li><a href="http://punjabcooperation.gov.in/">Punjab</a> </li>
+                <li><a href="http://cooperative.bih.nic.in/">Bihar</a> </li>
+            </ul>
+            <ul>
+                <li><a href="http://coop.cg.gov.in/">Chhattisgarh</a> </li>
+                <li><a href="http://www.rajcooperatives.nic.in/">Rajasthan</a> </li>
+                <li><a href="http://www.cooperatives.mp.gov.in/">Madhya Pradesh</a> </li>
+
+            </ul>
+            <ul>
+
+                <li><a href="http://sahakarayukta.maharashtra.gov.in/Site/Home/Index.aspx">Maharashtra</a> </li>
+                <li><a
+                        href="http://www.kerala.gov.in/index.php?option=com_content&view=category&layout=blog&id=48&Itemid=334">Kerala</a>
+                </li>
+
+                <li><a href="http://coopwb.org/">West Bengal</a> </li>
+            </ul>
+            <ul>
+                <li><a href="http://coop.jharkhand.gov.in/">Jharkhand</a> </li>
+                <li><a href="http://www.rcsorissa.nic.in/">Odisha</a> </li>
+
+                <li><a href="http://rcs.gujarat.gov.in/index.htm">Gujarat</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
+
+
+</ul>

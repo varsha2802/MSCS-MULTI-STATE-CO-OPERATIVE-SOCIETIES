@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\index.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #disclaimer {
+        color: red;
+    }
+
+    .firstsection {
+        margin: 36px auto;
+    }
+</style>
+{% endblock style %}
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+{% block body %}
+{{block.super}}
+
+<section class="boss">
+    <section class="firstsection" style="align-items: center;">
+        <h3 style="text-align: center;">Disclaimer: </h3>
+        <p class="p1">
+
+            This Website is designed & developed by National Informatics Center. The content owned and maintained by
+            Department of Agriculture, Cooperation and Farmers Welfare, Ministry of Agriculture and Farmers Welfare,
+            Government of India. The contents of this website are for information purposes only, enabling the public at
+            large to have a quick and an easy access to information and do not have any legal sanctity. Though every
+            effort is made to provide accurate and updated information, it is likely that the some details like Seed
+            Dealers, Seed varieties etc. may have changed prior to their update in the website. Hence, we do not assume
+            any legal liability on the completeness, accuracy or usefulness of the contents provided in this website.
+            The link provided to other external sites in some web pages/documents. We do not take responsibility for the
+            accuracy of the contents in those sites. The hyperlink given to external sites do not constitute an
+            endorsement of information, products or services offered by these sites. Despite our best efforts, we do not
+            guarantee that the documents in this site are free from infection by computer viruses etc.
+        </p>
+    </section>
+</section>
+
+{% endblock body %}

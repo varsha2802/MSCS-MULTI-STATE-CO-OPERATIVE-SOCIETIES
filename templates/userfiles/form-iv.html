@@ -1,0 +1,72 @@
+{% extends 'userfiles/base-form.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\form-i.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #form-iv {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+</style>
+{% endblock style %}
+
+{% block body %}
+{{block.super}}
+{% endblock body%}
+
+{% block name %}
+{{block.super}}
+
+{%endblock name %}
+
+{% block form-heading %}
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">FORM – IV</p>
+        <p class="head2">[See paragraph 5 (b) of the Schedule]</p>
+        <p class="head3">Application for appointing election agent</p>
+    </div>
+    <div class="child-content">
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I, ____________________
+            name of
+            father/spouse ________________member of _____________ (name of the society) contesting for election of
+            members
+            of
+            board of directors/office bearers do hereby nominate the following person an my election agent/counting
+            agent in
+            the
+            election _____________(name of the society) to be held on _____________(specify the date).
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
+        <div style="text-align:right;"> Name and Signature of the candidate<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div>
+            &nbsp;&nbsp;
+            <br />
+            <a id="ctl00_ContentPlaceHolder1_HyperLink1" href="Form/Form4.pdf"
+                style="color:Red;font-weight:bold;">DOWNLOAD
+                FORM
+                4 IN PDF</a>
+
+            <br />
+            <br />
+        </div>
+
+    </div>
+</div>
+{% endblock form-heading %}

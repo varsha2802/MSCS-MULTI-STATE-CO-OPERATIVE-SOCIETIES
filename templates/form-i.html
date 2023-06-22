@@ -1,0 +1,253 @@
+{% extends 'base-form.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static/form-i.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #form-i {
+        display: block;
+        color: white;
+        background-color: black;
+    }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+{{block.super}}
+{% endblock body%}
+
+
+{% block form-heading %}
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">FORM – I</p>
+        <p class="head2">[See sub-rule (1) of rule 3]</p>
+        <p class="head3">Application for registration of a Multi-State Cooperative Society under the Multi-State
+            Cooperative
+            Societies Act, 2002</p>
+    </div>
+    <div class="child-content">
+        <h6>To,</h6>
+        <address>
+            The Central Registrar of Cooperative Societies,<br>
+            New Delhi.
+        </address>
+
+        <p>Sir,</p>
+        <ol start="2">
+            <li>
+                <p>We submit herewith a proposal for registration of the following Multi-State Cooperative Society along
+                    with
+                    enclosures
+                    as indicated below:</p>
+            </li>
+
+            <ol type="a">
+                <li>
+                    <p> Name of the proposed Multi-State Co-operative Society;</p>
+                    <!-- Enter name of the proposed society -->
+                </li>
+                <li>
+                    <p>Headquarters and address to be registered;</p>
+                    <!-- Enter headquarters and address to be registered -->
+                </li>
+                <li>
+                    <p>Area of operations:</p>
+                    <!-- Enter area of operations -->
+                </li>
+                <li>
+                    <p>Main objectives:</p>
+                    <!-- Enter main objectives -->
+                </li>
+                <li>
+                    <p>Why is it absolutely necessary for the society to be registered under the Multi-State Cooperative
+                        Societies Act, 2002;</p>
+                    <!-- Enter the reason for registration -->
+                </li>
+                <li>
+                    <p>A certificate in respect of provisions of clause (b) or sub-section (1) of section 7;</p>
+                    <!-- Attach the certificate -->
+                </li>
+                <li>
+                    <p>A certificate in respect of provisions clause (c) of sub-section (1) of section 7;</p>
+                    <!-- Attach the certificate -->
+                </li>
+                <li>
+                    <p>A certificate in respect of provisions of clause (d) of sub-section (1) of section 7;</p>
+                    <!-- Attach the certificate -->
+                </li>
+                <li>
+                    <p>If all the members are individuals, indicate the number of persons from each State who have
+                        signed
+                        the
+                        application:</p>
+
+                </li>
+                <li>
+                    <p>Name and address of the applicant for the purpose of further correspondence:</p>
+                    <!-- Enter name and address of the applicant -->
+                </li>
+            </ol>
+
+            <li>
+                <p>Following documents are enclosed:</p>
+            </li>
+            <ol type="a">
+                <li>
+                    <p>A certificate from the _______________ Bank stating credit balance therein favor of the proposed
+                        multi-state cooperative society.</p>
+                    <!-- Attach the certificate -->
+                </li>
+                <li>
+                    <p> A scheme explaining how the proposed multi-state cooperative society has reasonable prospects of
+                        becoming
+                        a viable unit. We are sending herewith four copies of the bye-laws duly signed.</p>
+                    <!-- Attach the scheme and bye-laws -->
+                </li>
+            </ol>
+            <li>
+                <p>Following persons are authorised to sign the bye-laws and also to make necessary alteration therein.
+                </p>
+            </li>
+            <li>
+                <p>The particulars of the applicants are given here under :</p>
+
+
+
+                <br>
+                <!-- table -->
+                <table cellpadding=" 1" cellspacing="1" border="1" style="width: 95%;  color:black; ">
+                    <tr>
+                        <th style="text-align: center">S. No.</th>
+                        <th style="text-align: center">Name </th>
+                        <th style="text-align: center">If representing a corporate body,<br />name of the institution*
+                        </th>
+                        <th style="text-align: center">If the applicant is an
+                            <br />
+                            individual
+                        </th>
+                        <th style="text-align: center">Age</th>
+                        <th style="text-align: center">Nationality </th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">(1)</td>
+                        <td style="text-align: center">(2)</td>
+                        <td style="text-align: center">(3)</td>
+                        <td style="text-align: center">(4)</td>
+                        <td style="text-align: center">(4A)</td>
+                        <td style="text-align: center">(4B)</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+                <br>
+                <table cellpadding="1" cellspacing="1" border="1" style="width: 95%; color:black; ">
+                    <tr>
+                        <th style="text-align: center">Profession </th>
+                        <th style="text-align: center">Name of the State </th>
+                        <th style="text-align: center">Address</th>
+                        <th style="text-align: center">Amount subscribed<br />to share capital</th>
+                        <th style="text-align: center">In the case of representative of society or <br />
+                            a multi-state cooperative society, whether
+                            <br />
+                            he is Chairpersons/ President or
+                            <br />
+                            Chief Executive of that society
+                        </th>
+                        <th style="text-align: center">Signature </th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">(4C)</td>
+                        <td style="text-align: center">(5)</td>
+                        <td style="text-align: center">(6)</td>
+                        <td style="text-align: center">(7)</td>
+                        <td style="text-align: center">(8)</td>
+                        <td style="text-align: center">(9)</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+
+            </li>
+        </ol>
+        <!-- new section -->
+        <div class="my-3" style=" text-align:center;"> <strong>For Official Use</strong></div>
+        <br />
+        Received by registered post on+ _________________ by<sup>+</sup> ____________ in the office of the Central
+        Registrar, or
+        by hand
+        from Shri<sup>+</sup> _______________ entered in the register of application at S.No. _______________ .
+        <br />
+        <br />
+        <div style="text-align:right"> Signature of officer receiving</div>
+        <br />
+        <br />
+        Received registration proposal No. ______________ on ___________ for registration of _______________ Society
+        Ltd.,
+        (Proposed)
+        alongwith the enclosures referred to above from ______________ by post/hand deliver.
+        <br />
+        <br />
+        Place _____________
+        <br />
+        Date _______________
+        <br />
+        <div style="text-align:right"> Central Registrar
+            <br />
+            Signature and Stamp
+        </div>
+        <br />
+        <br />
+        * If representing a co-operative or any other co-operative body enclose a copy of the Resolution or
+        authorization
+        of the competent authority, authorizing the person to sign the application for registration.
+        <br />
+        <sup>+</sup> blanks to be filled in.
+        <br />
+        <a id="ctl00_ContentPlaceHolder1_HyperLink1" href="Form/Form1.pdf" style="color:Red;font-weight:bold;">DOWNLOAD
+            FORM
+            1
+            IN PDF</a>
+
+        <br />
+        <br />
+    </div>
+</div>
+
+
+
+{% endblock form-heading %}

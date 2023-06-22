@@ -1,0 +1,201 @@
+{% extends 'userfiles/base.html' %}
+{% block title %} <title>MSCS</title> {% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\index.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #contactlogout {
+        color: green;
+    }
+
+    .pagehead {
+        text-align: center;
+        font-size: medium;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .acc_trigger {
+        text-align: center;
+        font-size: 22px;
+
+    }
+
+    .card {
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 300px;
+        height: 400px;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* width: 50%; Each card occupies 50% of the container width */
+        padding: 10px;
+        margin: 12px 25px 15px 15px;
+        /* box-sizing: border-box; */
+    }
+</style>
+{% endblock style %}
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+{% block body %}
+{{block.super}}
+
+<div class="containerhead"></div>
+<div class="PageHead">
+    <h3 style="text-align: center;">CONTACT US</h3>
+</div>
+
+<div class="PageContain" style="text-align: center;">
+    <table border="1" cellpadding="0" cellspacing="0"
+        style="width: 100%; background-color: #FFFFFF; border-color: #7bc1f7; border-style: dotted;">
+        <tr>
+            <td style="width: 100%">
+
+                <div class="container" style="text-align: center; padding: 10px 10px 10px 10px;">
+                    <div class="card">
+                        <h2 class="acc_trigger"><a href="#">CENTRAL REGISTRAR</a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+
+                                <strong>
+                                    Shri Vijay Kumar,IAS
+                                    Additional Secretary & Central Registrar of Cooperative
+                                    Societies</strong><br />
+                                Ministry of Cooperation,<br>
+                                Floor-I, Atal Akshay Urja Bhawan, <br />
+                                Lodhi Road, CGO Complex, <br />
+                                New Delhi PIN 110 003<br />
+                                (Landmark : Jawaharlal Nehru Statdium) <br />
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="acc_trigger"><a href="#">DEPUTY SECRETARY</a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+                                <strong>Shri Kapil Meena, Deputy Secretary</strong>
+                                <br />
+                                Ministry of Cooperation, <br />
+                                New Delhi - PIN 110 001<br />
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="acc_trigger"><a href="#">DEPUTY COMMISSIONER </a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+
+                                <strong>Shri Jitender Nagar , Deputy Commissioner
+                                    <br>
+                                </strong>Room No 298<br />
+                                Ministry of Cooperation,<br />
+                                New Delhi - PIN 110 001<br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="acc_trigger"><a href="#">ASSISTANT COMMISSIONER</a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+                                <strong>Smt. Nisha Sagar, Assistant Commissioner </strong>
+                                <br />
+                                Room No 442<br />
+                                Ministry of Cooperation, <br />
+                                New Delhi - PIN 110 001<br />
+                                Phone : 011-23388911&nbsp; ext. 4998
+                                <br />
+                                Email-ID : regmscs@gmail.com
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="acc_trigger"><a href="#">Under Secretary</a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+
+                                <strong>Shri Amit Kumar Rawat, Under secretary</strong>
+                                <br />
+                                <br />
+                                Ministry of Cooperation, <br />
+                                New Delhi - PIN 110 001<br />
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=card>
+                        <h2 class="acc_trigger"><a href="#">DEPUTY DIRECTOR</a></h2>
+                        <div class="acc_container">
+                            <div class="block">
+
+
+                                <strong>Ms Sucheta Sharma, Deputy Director</strong>
+
+                                Ministry of Cooperation, <br />
+                                New Delhi - PIN 110 001<br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-evenly;">
+                        <div class="card">
+                            <h2 class="acc_trigger"><a href="#">SECTION OFFICER</a></h2>
+                            <div class="acc_container">
+                                <div class="block">
+                                    <strong>Shri Rajendra Singh, Section Officer
+                                        L &amp; M Section</strong><br />
+                                    Room No 388<br />
+                                    Ministry of Cooperation, <br />
+                                    New Delhi - PIN 110 001<br />
+
+                                    Phone :011-23388911 ext 4699/ 4397<br />
+                                    Email ID : lm.section397@gmail.com and regmscs@gmail.com
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h2 class="acc_trigger"><a href="#">SENIOR TECHNICAL ASSISTANT(STA) & SSO</a></h2>
+                            <div class="acc_container">
+                                <div class="block">
+                                    <strong>
+                                        Shri Vinay Ginni, Sr. Technical Assistant (Registration)</strong> <br />
+                                    Room No 399-A<br />
+                                    Ministry of Cooperation, Krishi Bhawan,<br />
+                                    New Delhi - PIN 110 001<br />
+                                    Phone : 011-23388911 ext 4998<br />
+                                    Email: regmscs@gmail.com
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endblock body%}

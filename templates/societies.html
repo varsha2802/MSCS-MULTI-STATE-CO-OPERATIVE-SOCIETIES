@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\form-i.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #societies {
+        color: red;
+    }
+
+
+
+    .child {
+        /* margin-top: 0px; */
+        background-color: rgb(196, 198, 201);
+        height: fit-content;
+        align-items: center;
+    }
+
+    .child-content {
+        box-shadow: 0px 0px 0px rgb(64 69 223 / 10%);
+
+    }
+
+    .child-heading {
+        margin: 10px auto;
+
+    }
+
+    .related {
+        width: 70vw;
+        /* background-color: rgb(219, 210, 210); */
+        align-items: center;
+        text-align: center;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        margin: auto;
+
+        /* box-shadow: 5px 5px 5px black; */
+    }
+
+
+    .related ol {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        margin: 0px;
+    }
+
+
+    .related ol li {
+        line-height: 1.7em;
+        padding: 0 0 0 0;
+        list-style: none;
+        margin: 5px auto;
+        padding: 25px 15px;
+        border: solid 2px white;
+        width: 240px;
+        height: 160px;
+        /* border-radius: 50%; */
+        text-align: center;
+        color: black;
+        align-items: center;
+        font-weight: bold;
+        list-style: none;
+    }
+
+    /* p {
+        color: white;
+    } */
+
+    related ol li a {
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    .related ol li:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+{% endblock style %}
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+
+
+{% block body %}
+
+<div class="child">
+    <div class="child-heading">
+        <p class="head1">THE SECOND SCHEDULE</p>
+        <p class="head2">[See Section 3(r) and 116]</p>
+        <p class="head3">
+            List of National Co-operative Societies
+        </p>
+    </div>
+    <div class="child-content">
+        <div class="related">
+            <ol style="padding-left:45px; text-align:justify;">
+                <li>National Cooperative Land Development Banks Federation Limited, Mumbai</li>
+                <li>National Federation of State Cooperative Banks Limited, Mumbai </li>
+                <li>National Cooperative Union of India Limited, New Delhi</li>
+                <li>National Agricultural Cooperative Marketing Federation of India Limited, New Delhi</li>
+                <li>National Cooperative Consumer’s Federation of India Limited, New Delhi</li>
+
+
+
+
+            </ol>
+            <ol>
+                <li>National Cooperative Housing Federation Limited, New Delhi</li>
+                <!-- <li>Indian Farmer’s Fertiliser Cooperative Limited, New Delhi</li> -->
+                <li>All India Federation of Cooperative Spinning Mills Limited, Mumbai</li>
+                <li>All India Industrial Cooperative Banks Federation Limited</li>
+                <!-- <li>National Cooperative Dairy Federation of India Limited, Anand </li> -->
+                <li>National Heavy Engineering Cooperative Limited </li>
+                <li>Bharatiya Beej Sahakari Samiti Limited, New Delhi</li>
+            </ol>
+            <ol>
+                <li>All India Handloom Fabrics Marketing Cooperative Society Limited, New Delhi </li>
+                <!-- <li>National Federation of Urban Cooperative Banks and Credit Societies Limited, New Delhi </li> -->
+                <li>Krishak Bharati Cooperative Limited, New Delhi </li>
+                <li>National Federation of Fishermen’s Cooperative Limited, New Delhi </li>
+                <li>National Federation of Labour Cooperative Limited, New Delhi </li>
+                <li>National Cooperative Exports Limited, New Delhi</li>
+
+            </ol>
+            <ol>
+                <li>National Federation of Cooperative Sugar Factories Limited, New Delhi</li>
+                <li>National Federation of Industrial Cooperative Limited</li>
+
+                <li>National Cooperative Tobacco Grower’s Federation Limited</li>
+                <li>Tribal Cooperative Marketing Development Federation of India Limited, New Delhi</li>
+                <li>National Cooperative Organics Limited, Anand Gujarat</li>
+
+            </ol>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock body %}

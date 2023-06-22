@@ -1,0 +1,562 @@
+{% extends 'userfiles/base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static/login.css">
+{% endblock link %}
+
+{% block style %}
+{{block.super}}<style>
+    #grievances {
+        color: green;
+    }
+
+    .child-content {
+        background-color: #d7c6c6;
+    }
+
+    .child-content {
+        background-color: #d7c6c6;
+    }
+
+    #grievance {
+        background-color: aliceblue;
+    }
+
+    .child-content {
+        box-shadow: 0px 0px 0px rgb(64 69 223 / 10%);
+        ;
+    }
+</style>
+{% endblock style %}
+
+{% block name %}
+{{block.super}}
+{{request.user.first_name}}
+{%endblock name %}
+
+{% block body %}
+
+
+
+
+<div class="child">
+    <div class="child-heading">
+        <h2 style="text-align: center;"> Grievance</h2>
+
+    </div>
+    <div class="child-content">
+
+        <form id="grievance" method="post" action="grievance2">
+            {% csrf_token %}
+
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br>
+                </div>
+
+                <div class="block">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required><br>
+                </div>
+
+            </div>
+
+
+
+            <div class="blockbox">
+
+
+                <div class="block">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="Please Enter Email" required>
+                </div>
+                <div class="block">
+                    <label for="mobile">Mobile:</label>
+                    <input type="phone" id="Mobile no." name="mobile" placeholder="Mobile No." required>
+                </div>
+
+                <div class="block">
+                    <label for="typeofcomplaint">Complaint Type:</label>
+                    <select id="TYPE" name="typeofcomplaint">
+                        <option value="">--Select Complaint Type--</option>
+                        <option value="Grievance">Grievance</option>
+                        <option value="Suggestion">Suggestion</option>
+                        <option value="General Information">General Information</option>
+                        <option value="Website related">Website related</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="blockbox">
+                <div class="block">
+                    <label for="societycomplaint">Complaint Related to the Society</label>
+                    <select id="TYPE" name="societycomplaint">
+                        <option value="">--Select Complaint Type--</option>
+                        <option value="-149">20th century foc staff coop credit society ltd, </option>
+                        <option value="128">A.P. Mahesh Cooperative Urban Bank Ltd.</option>
+                        <option value="644">Aadhar Multi State Coopertaive Credit Society Ltd.,</option>
+                        <option value="746">Aadi Credit Cooperative Society Ltd., </option>
+                        <option value="550">Aaditya Credit Coopertive Society Ltd., </option>
+                        <option value="1024">Aarambh Agro Purpose Cooperative Society ltd.,</option>
+                        <option value="866">Aarvee Multipurpose Cooperative Society Ltd., </option>
+                        <option value="115">Aasra Cooperative Credit Society ltd.,</option>
+                        <option value="491">AAVAM Credit Cooperative Society Ltd., </option>
+                        <option value="1017">Aavishkaar Agricultural Cooperative Society ltd.,</option>
+                        <option value="510">Abasaheb Multi State Multi Purpose Coop. Society ltd., </option>
+                        <option value="1220">Abhiman Multi State Cooperative Group Housing Society Ltd.,</option>
+                        <option value="925">Abhinav Urban Multistate Multipurpose Coop. Society ltd., </option>
+                        <option value="1159">Abhinavoday Housing Multi State Cooperative Society Ltd </option>
+                        <option value="249">Abhyudaya Cooperative Bank Ltd., </option>
+                        <option value="1026">Abirami Cooperative Housing Society ltd., </option>
+                        <option value="1009">ABN Multistate Agro Purpose Cooperative Society ltd., </option>
+                        <option value="319">Access Microfinance Multi-State Cooperative Society Ltd., </option>
+                        <option value="732">Achievers Credit Cooperative Society Ltd., </option>
+                        <option value="296">Adarsh Cooperative Bank Ltds./Madhav nagrik Sahakari Bank Ltd., </option>
+                        <option value="269">Adarsh Credit Cooperative Society Ltd., </option>
+                        <option value="689">Adarsh Multi State Coop. Credit Society Ltd., </option>
+                        <option value="1120">Adinath Urban Milk State Cooperative Credit Society Ltd</option>
+                        <option value="535">Aditya Aarthik Niyojan Multi State Cooperatrive Credit Society Ltd.,
+                        </option>
+                        <option value="398">Aditya Anagha Multi State Credit Cooperativwe Society Ltd.,</option>
+                        <option value="494">ADV Credit Cooperative Society Ltd., </option>
+                        <option value="1181">Advance Agriculture Biological &amp; Consumer Development Cooperative Ltd
+                        </option>
+                        <option value="1128">Aerocity Dwarka Multi State Cooperative Group Housing Society Limited,
+                        </option>
+                        <option value="537">Agape Missions Cooperative Credit Society Ltd.,</option>
+                        <option value="835">Agrani Cooperative Milk &amp;amp;amp; Milk Products Ltd., </option>
+                        <option value="1261">Agricultural Multi State Cooperative Society Ltd</option>
+                        <option value="135">Agricultural Produce &amp; Inputs Cooperative Marketing &amp; Consumer
+                            Society
+                            Ltd., </option>
+                        <option value="1250">Agriculture Regenration Multi State Cooperative Society Ltd</option>
+                        <option value="969">Agri-Tourism Cooperative Society Ltd.,</option>
+                        <option value="796">Agro Panan Sahakari Sanstha Maryadit, </option>
+                        <option value="996">Ahmednagar Agro Multistate Cooperative Society Ltd., </option>
+                        <option value="1114">Aimgrow Family Agro Purpose Cooperative Society Ltd,</option>
+                        <option value="-46">Air Corporations Employees Co-operative Credit Society Ltd.</option>
+                        <option value="1076">Ajanta Agro Multi state Coperative Society, </option>
+                        <option value="774">Ajinkya Uttamrao Autade Multi State Cooperative Credit Society Ltd.,
+                        </option>
+                        <option value="757">Ajit Multistate Cooperative Credit Society Ltd., </option>
+                        <option value="1197">Aksara Housing Cooperative Society Limited, </option>
+                        <option value="678">Akshat Credit Cooperative Society Ltd.,</option>
+                        <option value="635">Alamprabhu Urban Multi state Cooperative Credit Society Ltd.,</option>
+                        <option value="136">Al-Khair Cooperative Credit Society Ltd., </option>
+                        <option value="3">All India Cooperative Cotton Federation Ltd.,</option>
+                        <option value="871">All India Darjee Development Cooperative Soceity ltd.,</option>
+                        <option value="157">All India Dr. Babasaheb Ambedkar Cooperative Banks and Credit Societies
+                            Federation Ltd., </option>
+                        <option value="-33">All India Federation of Cooperative Spinning Mills Ltd, AIFCOSPIN</option>
+                        <option value="-21">All India Handloom Fabrics Marketing Cooperative Society Limited</option>
+                        <option value="-35">All India Industrial Cooperative Bank Federation</option>
+                        <option value="65">All India Multipurpose Coop. Society Ltd., </option>
+                        <option value="301">All India Weaker Section People&#39;s(S.Tribe) Cooperative thrift &amp;
+                            Credit
+                            Society ltd.,
+                        </option>
+                        <option value="1158">All Well Healthcare Multi State Cooperative Society Ltd </option>
+                        <option value="1300">Ambika Multi State Health Service for the Weaker Section Cooperative
+                            Society
+                            Ltd</option>
+                        <option value="359">Ambpali Handloom and Handicraft Multi State Cooperative Society Ltd.,
+                        </option>
+                        <option value="1145">Amrit Dairy Cooperative Society Ltd </option>
+                        <option value="318">Amudha Surabhi Thrift and Credit Cooperative Society Ltd.,</option>
+                        <option value="1153">AN (Anand Niwas) Multi State Group Housing Cooperative Society Ltd
+                        </option>
+                        <option value="920">Anand Fishing Coooperative Society Ltd., </option>
+                        <option value="1002">Anandi Multistate Agro Purpose Cooperative Society Ltd., </option>
+                        <option value="931">Anandshree Multipurpose Cooperative Society Ltd., </option>
+                        <option value="768">Anant-Nidhi Credit Cooperative Society Limited, </option>
+                        <option value="1216">Anathpindak Pariwar Multi State Cooperative Education Society Ltd.,
+                        </option>
+                        <option value="1080">Andhra Pradesh State Cooperative Urban Banks Federation Ltd., </option>
+                        <option value="1127">ANEE Agro &amp; Dairy Multi State Society Limited,</option>
+                        <option value="901">Anna Nagar Cooperative Housing Society ltd., </option>
+                        <option value="620">Annapurna Credit and Consumer Multi State Cooperative Society Ltd.,
+                        </option>
+                        <option value="68">Annapurna Mahila Cooperative Credit Society Ltd., </option>
+                        <option value="1203">Ansar Multi State Group Housing Cooperative Society Ltd.,</option>
+                        <option value="694">Anuraj Multi State Urban Coopertive Credit Society Ltd.,</option>
+                        <option value="825">Anusaya Multistate Multipurpose Cooperative Milk and Agro Products Ltd.,
+                        </option>
+                        <option value="744">Apeshwar Credit Cooperative Society Ltd., </option>
+                        <option value="48">Apex Urban Cooperative Bank of Maharashtra &amp; Goa Ltd. (Under Liquidation)
+                        </option>
+                        <option value="816">Apna Sahakari bank Ltd.,</option>
+                        <option value="695">Appasaheb Ovhat Multi State Coop. Credit Society Ltd.,</option>
+                        <option value="1098">Aravali Agro Multi State Cooperative Society Ltd, </option>
+                        <option value="483">Arban India Credit Cooperative Society Ltd., </option>
+                        <option value="448">Arbuda Credit Cooperative Society Ltd.,</option>
+                        <option value="523">Arihant Multi State Coop. Credit Society Ltd., </option>
+                        <option value="591">Arpan Multi State Urban Cooperative Credit Society Ltd.,</option>
+                        <option value="520">ARTH Credit Coop. Society Ltd., </option>
+                        <option value="739">Ashish Credit Cooperative Society Ltd.,</option>
+                        <option value="173">Ashwini Kumar Vanaushadhi Utpadak Prakriya Khredi Vikri Sahakari Sangh Ltd.,
+                        </option>
+                        <option value="273">Ashwini Sahakari Rugnalaya Sanshodhan Kendra Niyamit, </option>
+                        <option value="1105">ASPEN Multi State Cooperative Group Housing Society Ltd., </option>
+                        <option value="889">Aspire Multipurpose Cooperative Society ltd., </option>
+                        <option value="1016">Atharvaraj Mutistate Agro Purpose Cooperative Society Ltd. </option>
+                        <option value="1077">Atri Agriculture &amp; Allied Cooperative Society Ltd.</option>
+                        <option value="892">Atulyam Multistate Multipurpose Cooperative Society ltd., </option>
+                        <option value="1051">Aurangabad Aadrash Sahakari Dudh Utpadak &amp; prakriya Sangh Ltd.,
+                        </option>
+                        <option value="1126">Awas Agro &amp; Dairy Multi State Society Limited,</option>
+                        <option value="1324">B K Dhanlakshmi Multi State Agro Cooperative Society Limited</option>
+                        <option value="1176">B.G.N. (Bharat Gaurav Nirman) Multistate Housing Cooperative Society Ltd
+                        </option>
+                        <option value="339">B.H.E.E. Thrift and Credit Cooperative Society ltd.,</option>
+                        <option value="602">B.T. Borhade Multi State Credit Cooperative Society Ltd.,</option>
+                        <option value="-152">Bajaj Electrical Employees coop Credit society Ltd,</option>
+                        <option value="959">Baladebjew Multipurpose Multistate Cooperative Society ltd.,</option>
+                        <option value="769">Balaghat Multistate Cooperative Credit Society Ltd., </option>
+                        <option value="628">Balaji Multi State Cooperative Dairy Ltd., </option>
+                        <option value="459">Baliraja Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="589">Bandhan Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="-52">Bank of Ahmedabad Ltd.</option>
+                        <option value="999">Bank of Maharashtra Staff Credit Cooperative Society ltd.</option>
+                        <option value="-40">BASF India Ltd Employees Co-operative Credit Society Ltd</option>
+                        <option value="525">Beed Urban Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="1137">Bhagwati Multi State Agro Cooperative Society Ltd.,</option>
+                        <option value="588">Bhagyalaxmi Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="330">Bhairanath Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="1175">Bhandara Laxmi Multi State Credit Co-operative Society Limited </option>
+                        <option value="71">Bharat Cooperative Bank Ltd., </option>
+                        <option value="166">Bharat Foods Cooperative Ltd., </option>
+                        <option value="-53">Bharat Petroleum Employees Co-operative Society Ltd.</option>
+                        <option value="839">Bharath Grand Cooperative Housing Society Ltd., </option>
+                        <option value="932">Bharath Handloom &amp; Handicraft Multistate Cooperative Society ltd.,
+                        </option>
+                        <option value="235">Bharath Lajhna Multi State Housing Cooperative Society Ltd., </option>
+                        <option value="824">Bharath Multistate Cooperative Housing Society Ltd.,</option>
+                        <option value="1284">Bharathi Cooperative Housing Society Ltd </option>
+                        <option value="181">Bharathi Inter State Fisherman Cooperative Limited, </option>
+                        <option value="165">Bharati Agro Processing and Marketing Cooperative Ltd., </option>
+                        <option value="1306">Bharati North East Fisherman Co-operative Ltd. (BHARATICO)</option>
+                        <option value="87">Bharati Sahakari Bank Ltd., </option>
+                        <option value="840">Bharatiya Multi State Housing Cooperative Society ltd., </option>
+                        <option value="211">Bharatiya Processing Cooperative Federation Limited,&quot;</option>
+                        <option value="186">Bhartiya Agri (Inputs) Marketing Cooperative Ltd., </option>
+                        <option value="234">Bhartiya Cooperative Gramin Vikas Evens Nirman Ltd., </option>
+                        <option value="475">Bhartiya Farmers&#39; Agro Business Development Cooperative Ltd.,</option>
+                        <option value="103">Bhartiya Nari Kalyan Sehkari Samiti Ltd.,</option>
+                        <option value="33">Bhartiya Navintam Avam Nirman Sahkari Samiti</option>
+                        <option value="1048">Bhartiya Nirman Cooperative Ltd.,</option>
+                        <option value="429">Bhartiyans Multi State Coop. Credit Society Ltd.,</option>
+                        <option value="909">Bhaskar Multipurpose Cooperative Society Ltd., </option>
+                        <option value="1086">Bhavani Multi State Agro Cooperative Society Ltd,</option>
+                        <option value="568">Bhugol Multi State Urban Cooperative Credit Society Ltd.,</option>
+                        <option value="1107">Bhu-Laxmi Multi State Cooperative Group Housing Society Ltd,</option>
+                        <option value="1285">Bihar Cooperative Federation Ltd</option>
+                        <option value="1074">Bihar State Cooperative Marketing Union Ltd.</option>
+                        <option value="163">Bihar State Cooperative Milk Producers 39; Federation Ltd.,</option>
+                        <option value="1297">Bihar State handloom Weavers Cooperative Union Ltd (BISHCOTEX)</option>
+                        <option value="1269">Bihar State Housing Cooperative Federation Ltd</option>
+                        <option value="308">Birsa Munda Multi State Cooperative Ltd.,</option>
+                        <option value="734">BNP Multi State Credit Cooperative Society Ltd., </option>
+                        <option value="-3">Bombay Mercantile Co-operative Bank Ltd</option>
+                        <option value="715">Brilliance Credit Coopertive Society Ltd., </option>
+                        <option value="267">Buldana Urban Cooperative Credit Society Ltd., </option>
+                        <option value="518">Bumasaheb Nawale Multi State Coop. Credit Society Ltd., </option>
+                        <option value="251">Bundelkhand Krishi Utpadan Vipnan Sahakari Samity Ltd., </option>
+                        <option value="-162">C.A.D &amp; A.A.I Employees Cooperative Credit Society Ltd</option>
+                        <option value="-164">Canara Bank Employees Cooperative Thrift &amp; Credit Society Ltd</option>
+                        <option value="-56">Canara Bank Officers Cooperative Thrift &amp; Credit Society Limited
+                        </option>
+                        <option value="143">Capital Credit Cooperative Multi State Society Ltd.,</option>
+                        <option value="1068">Capital Multi State Cooperative Group Housing Society Ltd.,</option>
+                        <option value="855">Carmel Alumni Multistate Cooperative Society, </option>
+                        <option value="-140">CEAT Employees Coop. Credit Society Ltd, </option>
+                        <option value="274">Central Agricultural &amp; Allied Farmers Cooperative Ltd., </option>
+                        <option value="-57">Central Bank National Employees Co-operative Credit Society Ltd.</option>
+                        <option value="-58">Central Bank of India Employees Co-operative Credit Society Ltd.</option>
+                        <option value="-112">Central Goods and Service Tax and Allied Departments Employees Cooperative
+                            Credit Society Ltd
+                        </option>
+                        <option value="96">Central Government Employees Consumer Cooperative Society Ltd., </option>
+                        <option value="81">Central Government Undertakings Employees Housing Cooperative Society ltd.,
+                        </option>
+                        <option value="149">Central Govt. Undertakings Employees&#39; Cooperative Thrift &amp; Credit
+                            Society Ltd., </option>
+                        <option value="21">Central PWD Employees Coop. Thrift &amp; Credit Society</option>
+                        <option value="669">Central Sahkari Upbhokta Bhandar Ltd., </option>
+                        <option value="9">Central Warehousing Corporation Employees Coop. Thrift &amp; Credit Society
+                            Ltd.,
+                        </option>
+                        <option value="833">Chaitnya Multistate Sahakari Dudh Utpadak &amp; Prakriya Sangh Ltd.,
+                        </option>
+                        <option value="793">Chakra Multistate Credit Cooperative Society Ltd., </option>
+                        <option value="1305">Chambal Agriculture Marketing Cooperative Ltd</option>
+                        <option value="710">Chambal malwa Multi-State Credit Cooperative Society Ltd., </option>
+                        <option value="974">Champion Multistate Agro Purpose Cooperative Socierty ltd.,</option>
+                        <option value="761">Chandrabhaga Urban Multistate Credit Cooperative Society Ltd., </option>
+                        <option value="1123">Chandrapur Urban Multi State Cooperative Credit Society Ltd</option>
+                        <option value="712">Chattrapati Multi State Coop. Credit Society Ltd.,</option>
+                        <option value="1219">Chennai Annanagar Co-operative Housing Society Limited,</option>
+                        <option value="721">Chh. Rajarshishahu Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="240">Chidanand Basaprabhu Kore Sahakari Sakkare Karkhane Niyamit, Chikodi
+                        </option>
+                        <option value="89">Chilly Growers Cooperative Society Ltd.,</option>
+                        <option value="595">Chitra Specimens Multipurpsoe Cooperative Society Ltd</option>
+                        <option value="1309">Chitrakoot Multi State Agriculture Marketing Cooperative Society Ltd.
+                            (CMAMCS)
+                        </option>
+                        <option value="990">CIPNA Agro purpose Cooperative Society Ltd., </option>
+                        <option value="75">CITIZENCREDIT Cooperative Bank Ltd., </option>
+                        <option value="1263">Citizens Cooperative Bank Ltd</option>
+                        <option value="-59">Civil Aviation Department Employees Co-operative Credit Society (Kolkata)
+                            Ltd.
+                        </option>
+                        <option value="-60">Cooperative Bank of Ahmedabad Ltd.</option>
+                        <option value="59">Cooperative Store Ltd., </option>
+                        <option value="72">COSMOS Cooperative Bank Ltd., </option>
+                        <option value="1308">CP Agrotech Multi State Cooperative Society Ltd.</option>
+                        <option value="978">Creative India Multistate Agro Purpose Cooperative Society ltd., </option>
+                        <option value="634">Crown Credit Coopertaive Society Ltd., </option>
+                        <option value="571">D. Dhanashri Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="930">DAG Agricultural Multistate Cooperative Society Ltd.,</option>
+                        <option value="956">Dahiwadi Multistate Cooperative Milk Sangh Ltd.,</option>
+                        <option value="783">Dattamrut Multistate Cooperative Credit Society Ltd.,</option>
+                        <option value="1028">Dattasai Multi State Cooperative Milk and Milk Products ltd.</option>
+                        <option value="57">Daulat Shetkari Sakhar Karkhana Ltd.,</option>
+                        <option value="209">Deendayal Magasvargiya Sahakari Soat Girni Ltd.,</option>
+                        <option value="-61">Defence Accounts (Fys.) Cooperative Society Ltd.</option>
+                        <option value="1095">Delhi Heights Multi State Cooperative Group Housing Society Ltd,</option>
+                        <option value="24">Dena Bank Staff Coop. Credit Society Ltd</option>
+                        <option value="837">Deogaon Cooperative Milk Producer &amp; Processor Ltd., </option>
+                        <option value="-101">Desh bhakti Ratnapanna Kumbhar Panchaganga Sahakari Sakhar Karkhana Ltd.
+                        </option>
+                        <option value="919">Desh Mangal Multipurpose Cooperative Society Ltd., </option>
+                        <option value="-62">Development Co-operative Bank Ltd. </option>
+                        <option value="646">DGR Credit Cooperative Society Ltd.,</option>
+                        <option value="417">Dhanashri Multi State Coop. Credit Society Ltd., </option>
+                        <option value="346">Dhanlaxmi Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="1169">Dhanmudra Urban Multi-state Co-operative Credit Society Ltd</option>
+                        <option value="1294">Dharitri Jute and Eco Friendly Products Multi State Cooperative Society Ltd
+                        </option>
+                        <option value="779">Dharmatma Multistate Credit Cooperative Society Ltd., </option>
+                        <option value="1082">Diamond Multi State Cooperative Group Housing Society Limited, </option>
+                        <option value="1025">Disha housing Cooperative Society ltd.,</option>
+                        <option value="976">Disha Women Multistate Agro Purpose Ltd.,</option>
+                        <option value="256">Divine Grace Green Farming and Marketing Multi State Cooperative Society
+                            Ltd.,
+                        </option>
+                        <option value="928">Dnyandeep Multistate Multipurpose Cooperative Milk and Agro Products Ltd.,
+                        </option>
+                        <option value="970">Do Care Agro Purpose Cooperative Society ltd., </option>
+                        <option value="1275">Dombivli Nagari Sahakari Bank Ltd</option>
+                        <option value="396">Dr. Babasaheb Ambedkar Magaswangee AgroProducts Processing Cooperative
+                            Sanstha
+                            Ltd., </option>
+                        <option value="484">Dr. Babasaheb Ambedkar Multi State Cooperative Credit Society Ltd.,
+                        </option>
+                        <option value="313">Dr. Vijayrao Bora Wake Multi State Cooperative Society Ltd., </option>
+                        <option value="329">Dryararadha Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="1217">Durva Multi State Dairy &amp; Agro Cooperative Society Ltd.,</option>
+                        <option value="1061">Dwarka Heights Cooperative Housing society Ltd., </option>
+                        <option value="587">Dwarka Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="762">Dyaneshwari Multistate Urban Cooperative Credit Society Ltd., </option>
+                        <option value="-63">E &amp; N F Rly. Junior Cooperative Credit Societies Ltd.</option>
+                        <option value="-64">E. P. F. Staff Co-operative Credit Society Ltd., Mumbai,</option>
+                        <option value="203">East India Co-Operative Agro-Industries &amp; Marketing Ltd</option>
+                        <option value="679">Eden Multi State Coop. Credit Society Ltd., </option>
+                        <option value="1173">EG(Everlasting Green) Agro Multi State Cooperative Society Limited
+                        </option>
+                        <option value="567">Empire Multi State Credit Coopperative Society Ltd.,</option>
+                        <option value="1186">Enigma Green Co-operative Group Housing Society Limited, G-1, Plot No. 10,
+                            Sector-11, Pocket-4,
+                            Dwarka, New Delhi-110 075 </option>
+                        <option value="1322">Ente Naadu Multi State Agro Co-operative Society Ltd.</option>
+                        <option value="442">ESAF Swasraja Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="873">Eureka Multistate Multipurpose Cooperative Society ltd., </option>
+                        <option value="1214">Evergreen Agro Multi State Co-operative Society Limited, </option>
+                        <option value="776">Evershine Multipurpose Coopertaive Society Ltd.,</option>
+                        <option value="736">EVOS Multistate Credit Cooperative Society Ltd., </option>
+                        <option value="1116">Excel Labour &amp; Engineering Cooperative Society Limited, </option>
+                        <option value="1100">Experia Boulevard Multi State Cooperative Group Housing Society Ltd.,
+                        </option>
+                        <option value="1262">Fabtech Multi State Cooperative Credit society Ltd</option>
+                        <option value="307">Family Development Cooperative Thrift and Credit Solciety Ltd., </option>
+                        <option value="1295">Farm to Foreign Exports Entrepreneur Development Multi State Cooperative
+                            Society Ltd </option>
+                        <option value="259">Farmers Agri Business Cooperative Society Limited,</option>
+                        <option value="648">Farmers India Thrift &amp; Trading Cooperative Ltd., </option>
+                        <option value="1299">Farmtrade Agro Multi state Marketing Cooperative Ltd</option>
+                        <option value="1255">Federation of Multi State Cooperative Credit Society Ltd</option>
+                        <option value="223">Federation of Tibetan Cooperative in India Ltd., </option>
+                        <option value="427">Fingrowth Cooperative Bank Ltd</option>
+                        <option value="766">First Finance Credit Cooperative Society Ltd., </option>
+                        <option value="1135">Flair Solar Multi State Cooperative Society Ltd., </option>
+                        <option value="361">Food Corporation of India Employees&#39; Cooperative Credit Society (NEZ)
+                            Ltd.
+                        </option>
+                        <option value="36">Food Corporation of India Workers Coop. Credit Society Ltd., </option>
+                        <option value="574">Fortune Multi State Credit Cooperative Society Ltd., </option>
+                        <option value="1163">Freedom Agro &amp; Dairy Multi State Cooperative Society Limited</option>
+                        <option value="949">Fruition Multipurpose Cooperative Society ltd.,</option>
+                        <option value="665">Fulai Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="951">Future Agro Cooperative Society Ltd., </option>
+                        <option value="984">Future Care Agro Purpose Cooperative Society Ltd., </option>
+                        <option value="788">Gab Gramya Vikas Credit Cooperative Society Ltd.,</option>
+                        <option value="637">Gadavari Multi State Cooperative Credit Society ltd.,</option>
+                        <option value="512">Gajanan Multi State Cooperative Credit Society ltd.,</option>
+                        <option value="1014">Gajvaibhavlaxmi Multistate Agro Purpose Cooperative Society Ltd., </option>
+                        <option value="872">Galaxy Multi State Multipurpose Cooperative Society ltd., </option>
+                        <option value="780">Ganesh Multistate Cooperative Credit Society Ltd.,</option>
+                        <option value="1110">Ganga Kisan Multi State Agro Purpose Cooperative Society Ltd</option>
+                        <option value="541">Gangakhed Multi state Cooperative Credit Society Ltd</option>
+                        <option value="184">Gaurav Dairy Cooperative Society Ltd., </option>
+                        <option value="-66">General Insurance Corporation Employees Co-operative Thrift &amp; Credit
+                            Society
+                            Ltd.</option>
+                        <option value="500">General Insurance Employees Cooperative Credit Society Ltd.,</option>
+                        <option value="582">Giants Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="936">Giridhar Multipurpose Cooperative Society Ltd., </option>
+                        <option value="818">Godavari-Nanded Multistate Urban Cooperative Credit Society Ltd., </option>
+                        <option value="-42">Godfrey Phillips India Limited Employee&#39;s Co-operative Credit Society
+                            Limited</option>
+                        <option value="125">Gokak SC&amp;ST Sahakari Sakkar Kharkhana Niyamit ,Distt. Belgaon </option>
+                        <option value="511">Gokul Multi State Cooperative Credit Society ltd., </option>
+                        <option value="731">Golden Credit Cooperative Society Ltd., </option>
+                        <option value="1008">Golden Eagle Cooperative Housing Society Ltd., </option>
+                        <option value="1073">Goldil Multi State Agro Cooperative society Ltd.,</option>
+                        <option value="989">Gopalkrishna Cooperative Milk and Products Ltd., </option>
+                        <option value="1213">Gopinath Patil Parsik Janata Sahakari Bank Ltd, G P Parsik Bank Ltd
+                        </option>
+                        <option value="426">Goreshwar Gramin Multi State Coop. Credit Society Ltd., </option>
+                        <option value="1010">Gowardhan Cooperative Milk Producer and Processors Ltd., </option>
+                        <option value="1215">Gracious Multi State Agro Cooperative Society Ltd., </option>
+                        <option value="636">Graha Cooperative Housing Society ltd., </option>
+                        <option value="139">Grahak Bazar Cooperative Society Ltd., </option>
+                        <option value="1013">Grameen Development Multistate Agro Purpose Coopertaive Society ltd.,
+                        </option>
+                        <option value="461">Grameen Seva Cooperative Credit Society Ltd., </option>
+                        <option value="1023">Gramin Bharat Multi State Agro Purpose Cooperative Society Ltd.,
+                            Maharashtra
+                        </option>
+                        <option value="905">Gramin Kisan Vikas Seva Multipurpose Cooperative Society Ltd., </option>
+                        <option value="303">Gramin Vikas Evam Nirman Bharatiya Cooperative Ltd., </option>
+                        <option value="743">Gramin Vikas Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="1033">Gramini Kishan Bikash Agro Purpose Cooperative Society Ltd.,</option>
+                        <option value="-69">Grant Employees Co-operative Credit Society Ltd.</option>
+                        <option value="973">Great India Housing Cooperative Society Ltd.,</option>
+                        <option value="817">Great Lakes Multistate Cooperative Housing Society Ltd.,</option>
+                        <option value="1286">Green Earth Agro Cooperative Society Ltd</option>
+                        <option value="469">Green India Multi State Members Credit Cooperative Society Ltd.,</option>
+                        <option value="1058">Greenway Agro Purpose Cooperative Society Ltd.,</option>
+                        <option value="422">Gujarat Spices and Oilseeds Growers Coop. Union Ltd.,</option>
+                        <option value="844">Gurukrupa Multipurpose Cooperatvie Society ltd., </option>
+                        <option value="933">Gurupadappa Nagmarpolli Multi super speciality Cooperative Hospital and
+                            Research
+                            Centre Ltd.,
+                        </option>
+                        <option value="850">Guruvarya Lalasaheb Patil Coopertaive Milk and Milk Products Ltd., </option>
+                        <option value="1062">Habitat Cooperative Group Housing Society Ltd., </option>
+                        <option value="638">Haldhar Vikas Credit Cooperative Society ltd., </option>
+                        <option value="798">Hariom Multistate Cooperative Credit Society Ltd., </option>
+                        <option value="1104">Harmony Multi State Cooperative Group Housing Society Ltd. ,</option>
+                        <option value="770">Hatlai Multistate Cooperative Credit Society Ltd., </option>
+                        <option value="748">HBN Credit Cooperative Society Ltd., </option>
+                        <option value="1313">Heaven Multi State Agro Cooperative Society Ltd</option>
+                        <option value="822">Himalaya Multistate Cooperative Housing Society Ltd., </option>
+                        <option value="913">Himalayan Agro Cooperative Society ltd., </option>
+                        <option value="977">Hind Agro Purpose Cooperative Society Ltd., </option>
+                        <option value="220">Hindustan Agro-Cooperative Limited, </option>
+                        <option value="677">Hindustan Labour MultiState Cooperative Society Ltd., </option>
+                        <option value="366">Hindustan Multi State Cooperative Housing Society Ltd., </option>
+                        <option value="834">Hindustan Multistate Cooperative Milk Producer &amp; Processors Union Ltd.,
+                        </option>
+                        <option value="-71">Hindustan Petroleum Corporation Employees Co-operative Society Ltd.</option>
+                        <option value="283">Hirkani Mahila Sahakari Dudh Utpadak Society Ltd., </option>
+                        <option value="814">Home Multi State Cooperative Housing Society Ltd., </option>
+                        <option value="888">Hope Multistate Multipurpose Cooperative Society Ltd.,</option>
+                        <option value="-43">HP Employees Co-operative Credit Society Ltd.</option>
+                        <option value="352">Hriday Credit &amp; Cooperative Society Ltd., </option>
+                        <option value="476">Human Welfare Credit &amp; Thrift Cooperative Society Ltd.,</option>
+                        <option value="594">Humara India Credit Cooperative Society Ltd.,</option>
+                        <option value="67">Hutatma Sahakari Dudha Uptpadak Sangh Maryadit, </option>
+                        <option value="10">ICICI Bank Staff Cooperative Thrift &amp; Credit Society Ltd</option>
+                        <option value="-74">IDBI Staff Cooperative Credit Society Ltd</option>
+                        <option value="6">Ideal Commercial Credit Multistate Co-Operative Society Ltd</option>
+                        <option value="1171">Imayam Multi State Housing Co-operative Society Limited</option>
+                        <option value="408">Indian Advocates Multi State Multi purpose Cooperative Society Ltd.,
+                        </option>
+                        <option value="233">Indian Agriculture Marketing Cooperative Ltd., </option>
+                        <option value="73">Indian Agro Marketing Cooperative Ltd</option>
+                        <option value="30">Indian Coffee Marketing Coperative Ltd</option>
+                        <option value="367">Indian Commercial Agricultrue Cooperative Ltd.</option>
+                        <option value="601">Indian Consumers Cooperative Ltd., </option>
+                        <option value="77">Indian Cooperative Credit Society Ltd.</option>
+                        <option value="45">Indian Co-operative Network for Women Ltd., (formerly known as Working
+                            Women&#39;s Coop. Society
+                            Ltd.,)</option>
+                        <option value="395">Indian Diversified &amp; Sustainable Agricultrue Cooperative Ltd., </option>
+                        <option value="37">Indian Farm Forestry Development Coop. Ltd., </option>
+                        <option value="264">Indian Farmers Development Multipurpose Cooperative Society ltd., </option>
+                        <option value="-28">Indian Farmers Fertiliser Cooperative Ltd (IFFCO) </option>
+                        <option value="49">Indian Labour Cooperative Society Ltd.</option>
+                        <option value="187">Indian Multi State Cashew Processing Cooperative Society Ltd., </option>
+                        <option value="281">Indian National Development and Integration Agriculture Cooperative Society
+                            Ltd., </option>
+                        <option value="-75">Indian Oil Corporation Employees Co-operative Credit Society Ltd.</option>
+                        <option value="-76">Indian Oil Employees Co-operative Credit Society Ltd.</option>
+                        <option value="-124">Indian Oil Employees Co-operative Society Ltd (SR)</option>
+                        <option value="-77">Indian Oil Employees Welfare Co-perative Society Limited</option>
+                        <option value="-78">Indian Overseas Bank Staff Co-operative Credit Society Ltd</option>
+                        <option value="939">Indian People Multistate Multipurpose Cooperative Socieity Ltd.,</option>
+                        <option value="292">Indian Projects &amp; Constructions Cooperative Ltd., &#39;</option>
+                        <option value="-79">Indian Statistical Institute Co-operative Credit Society Limited</option>
+                        <option value="1147">Info Care Agriculture Multi State Cooperative Society Ltd </option>
+                        <option value="1011">Insure Life Housing Cooperative Society Ltd.,</option>
+                        <option value="430">Inter-State Agricultural marketing and Processing Cooperative Society Ltd.,
+                        </option>
+                        <option value="787">IPCCS Urban Multistate Cooperative Credit Society Ltd., </option>
+                        <option value="937">Ishan Multipurpose Multistate Cooperative Society ltd., </option>
+                        <option value="-82">Ismailia Co-operative Bank Limited </option>
+                        <option value="968">J.S.(Jeevan Saral) Agro Purpose Cooperative Society Limited, </option>
+                        <option value="447">Jagruti Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="507">Jai Baliraja Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="1264">Jai Mahesh Multi State Vehicle Services Cooperative Society Ltd</option>
+                        <option value="527">Jai Vaibhav Laxmi multi State Coopertive Credit Society ltd., </option>
+                        <option value="663">Jaihind Multi State Cooperative Credit Society Ltd., </option>
+                        <option value="945">Jaimalhar Multistate Multipurpose Cooperative Society ltd.,</option>
+                        <option value="464">Jain Urban Multi State Cooperative Credit Society Ltd.,</option>
+                        <option value="207">Jaipur Ex-Servicemen Multi-State Welfare Cooperative Society ltd., &quot;
+                        </option>
+                        <option value="478">Jakraya Multi State Coopertive Credit Society Ltd.,</option>
+                        <option value="1055">Jan Sahara Multistate Agro Purpose Cooperative Society ltd., </option>
+                        <option value="880">Jan Vikas Multipurpose Cooperative Society Ltd., </option>
+                        <option value="1357">Janamaitheri Agricultural Cooperative Society Ltd.</option>
+                    </select>
+                </div>
+
+                <div class="block">
+                    <label for="complaint">Complaint/Feedback: </label>
+                    <textarea id="complaint" style="align-items: center;" name="complaint" rows="2" cols="50"
+                        placeholder="Feedback" required></textarea>
+                </div>
+            </div>
+
+            <div class="blockbox">
+                <div class="block"><button class="btni">SUBMIT</button></div>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <!-- <input type="submit" value="Submit"> -->
+
+
+
+</div>
+</div>
+{% endblock body %}

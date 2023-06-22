@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %} <title>MSCS</title>{% endblock title %}
+{% block link %}
+{{block.super}}
+<link rel="stylesheet" href="static\base-login.css" />
+{% endblock link %}
+
+{% block style %}
+{{block.super}}
+<style>
+    #chart {
+        color: red;
+    }
+
+    .child-content {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .child-heading {
+        margin: auto;
+    }
+</style>
+
+{% endblock style %}
+
+{% block bttn %}
+{{block.super}}
+<div class="logbutton">
+    <button class="btn"><a id="portal" href="/adminlogin">
+            Login
+
+        </a>
+    </button>
+    <button class="btn"><a id="portal" href="/form">
+            Register
+
+        </a>
+    </button>
+
+</div>
+{% endblock bttn %}
+
+{% block body %}
+<div class="box">
+    <div class="sidebar">
+
+        <a id="chart1" href="/chart1">State-Wise Chart</a>
+        <a id="chart2" href="/chart2">Year-Wise Chart</a>
+        <a id="chart3" href="/chart3">Type-Wise Chart</a>
+        <!-- onCooperative 2002 -->
+
+    </div>
+
+    <div class="parent">
+        {% block form-heading %}
+        <div class="child">
+
+            <div class="child-heading">
+
+                <!-- <p class="head1"></p>
+                <p class="head2"></p>
+                <p class="head3"></p> -->
+
+            </div>
+            <div class="child-content">
+
+            </div>
+
+        </div>
+        {% endblock form-heading %}
+
+
+    </div>
+
+
+
+</div>
+
+</div>
+{% endblock body %}
