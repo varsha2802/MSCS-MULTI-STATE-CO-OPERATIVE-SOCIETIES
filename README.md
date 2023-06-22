@@ -5,12 +5,12 @@ This project is made using Django Framework.
 Procedure to follow to run this project:
 1. Clone this Website in a "Hello" named Folder.
 2. Open the Folder in the suitable editor.
-3. Open Terminal and write command : "pip install django" (incase if your system doesn't have django installed)
-4. Now to run the server write: "python manage.py runserver"
-5. And click on the loaded server
+3. Open Terminal and write command : "pip install django" (incase if your system doesn't have django installed).
+4. Now to run the server write: "python manage.py runserver".
+5. And click on the loaded server.
 
 
-Language used: HTML, CSS, JS, Python
+Language used: HTML, CSS, JS, Python.
 Aim: Interactive dashboard
 
    
