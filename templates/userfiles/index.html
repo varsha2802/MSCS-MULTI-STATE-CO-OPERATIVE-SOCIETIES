@@ -13,7 +13,7 @@
         }
 
         .firstsection {
-                height: 415px;
+                height: fit-content;
         }
 
         .sidecontainer {
@@ -34,6 +34,17 @@
                 width: 350px;
                 height: 250px;
         }
+        @media screen and (max-width: 600px) {
+    .sidecontainer {
+      display: none;
+
+
+    }
+
+    .firstsection {
+      display: none;
+    }
+  }
 </style>
 {% endblock style %}
 
